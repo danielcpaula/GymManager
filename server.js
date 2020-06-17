@@ -4,6 +4,8 @@ const routes = require("./routes")
 
 const server = express()
 
+/*HABILITANDO PARA RECEBER req.body*/
+server.use(express.urlencoded({extended: true}))
 server.use(express.static('public'))
 server.use(routes)
 

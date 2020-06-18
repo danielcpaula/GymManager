@@ -1,1 +1,18 @@
-{"avatar_url":"http://google.com.br","name":"Daniel do Casal de Paula","birth":"1987-10-01","gender":"M","services":"Nada"}
+{
+  "instructors": [
+    {
+      "avatar_url": "http://google.com.br",
+      "name": "Daniel do Casal de Paula",
+      "birth": "1987-10-01",
+      "gender": "M",
+      "services": "Nada"
+    },
+    {
+      "avatar_url": "http://google.com.br",
+      "name": "Daniel do Casal ",
+      "birth": "1964-05-25",
+      "gender": "F",
+      "services": "Nada - Nada"
+    }
+  ]
+}

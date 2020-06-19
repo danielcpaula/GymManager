@@ -37,6 +37,23 @@ exports.post = function(req, res){
   //return res.send(req.body)
 }
 
+exports.show = function(req, res) {
+  //req.query.id
+  //req.body
+  //req.params.id = /:id
+  const {id} = req.params
+
+  const foundInstructor = data.instructors.find(function(instructor){
+    return instructor.id == id
+  })
+
+  if (!foundInstructor) return res.send("Instructor no found")
+
+  return res.send(foundInstructor)
+}
+
+
+
 
 
 //update

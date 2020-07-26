@@ -49,7 +49,7 @@ exports.show = function(req, res) {
 
   if (!foundInstructor) return res.send("Instructor no found")
 
-  return res.send(foundInstructor)
+  return res.render("instructors/show", {instructor: foundInstructor})
 }
 
 function age(timestamp) {

@@ -41,10 +41,10 @@ exports.show = function(req, res) {
   //req.query.id
   //req.body
   //req.params.id = /:id
-  const {id} = req.params
+  const { id } = req.params
 
   const foundInstructor = data.instructors.find(function(instructor){
-    return instructor.id == id
+    return id == instructor.id
   })
 
   if (!foundInstructor) return res.send("Instructor no found")
@@ -53,11 +53,11 @@ exports.show = function(req, res) {
     ...foundInstructor,
     age: "",
     gender: "",
-    services:"",
+    services: foundInstructor.services.split(","),
     created_at: ""
   }
-
-  return res.render("instructors/show", {instructor: foundInstructor})
+  //return res.send(foundInstructor)
+  return res.render("instructors/show", { instructor: foundInstructor })
 }
 
 function age(timestamp) {

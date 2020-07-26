@@ -1,5 +1,6 @@
 const fs = require('fs')
 const data = require("./data.json")
+const { age } = require("./utils")
 //Create
 exports.post = function(req, res){
   const keys = Object.keys(req.body)
@@ -51,29 +52,16 @@ exports.show = function(req, res) {
 
   const instructor = {
     ...foundInstructor,
-    age: "",
+    age: age(foundInstructor.birth),
     gender: "",
     services: foundInstructor.services.split(","),
-    created_at: ""
+    created_at: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at)
   }
   //return res.send(foundInstructor)
-  return res.render("instructors/show", { instructor: foundInstructor })
+  return res.render("instructors/show", { instructor })
 }
 
-function age(timestamp) {
-  const today = new Date()
-  const birthDate = new Date(timestamp)
 
-  //2019 - 1984
-  let age = today.getFullYear() - birthDate.getFullYear()
-  const month = today.getMonth() - birthDate.getMonth()
-
-  if(month < 0 || month == 0 && today.getDate() < birthDate.getDate() ) {
-    age = age - 1
-  }
-
-  return age
-}
 
 
 

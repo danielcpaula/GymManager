@@ -2,6 +2,13 @@ const express = require('express')
 const routes = express.Router()
 const instructors = require('./instructors')
 
+//HTTP VERBS
+//GET: RECEBER RESOURCE
+//POST: CRIAR OU SALVAR RESOUCE COM DADO ENVIADOS
+//PUT: ATUALIZAR RESOURCE
+//DELETE: DELETAR RESOURCE
+
+
 routes.get('/', function(req, res) {
   return res.redirect("/instructors")
 })
@@ -19,6 +26,8 @@ routes.get('/instructors/:id', instructors.show)
 routes.get('/instructors/:id/edit', instructors.edit)
 
 routes.post("/instructors", instructors.post)
+
+routes.put("/instructors", instructors.put)
 
 routes.get ('/members', function(req, res) {
   return res.send("members")

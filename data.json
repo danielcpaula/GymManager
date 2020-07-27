@@ -1,18 +1,9 @@
 {
   "instructors": [
     {
-      "id": "1",
-      "avatar_url": "https://avatars2.githubusercontent.com/u/9807253?s=400&u=9aff2422be84217bfe4932cae1f554010a0e8c65&v=4",
-      "name": "Daniel do Casal de Paulaa",
-      "birth": 591667200000,
-      "gender": "M",
-      "services": "musculação,natação",
-      "created_at": 1595791426138
-    },
-    {
-      "id": 2,
+      "id": "2",
       "avatar_url": "http://www.globo.com",
-      "name": "Sinara Fagundes",
+      "name": "Sinara Fagundes de Paula",
       "birth": 808704000000,
       "gender": "F",
       "services": "Musculação,crossfit",
@@ -26,15 +17,6 @@
       "gender": "F",
       "services": "Danca, luta",
       "created_at": 1595806267143
-    },
-    {
-      "id": 4,
-      "avatar_url": "https://avatars2.githubusercontent.com/u/9807253?s=400&u=9aff2422be84217bfe4932cae1f554010a0e8c65&v=4",
-      "name": "Daniel do Casal de Paula",
-      "birth": 560044800000,
-      "gender": "M",
-      "services": "musculação,natação",
-      "created_at": 1595869512463
     }
   ]
 }

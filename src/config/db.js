@@ -5,5 +5,5 @@ module.exports = new Pool({
   password: "Driver01#",
   host: "localhost",
   port: 5432,
-  database: "gymmanger" 
+  database: "gymmanager" 
 })
